@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-29T11:38:33 IST" name="Suite" finished-at="2023-12-29T11:39:39 IST" duration-ms="66175">
+    <groups>
+      <group name="smoke">
+        <method signature="Login.doLogin()[pri:0, instance:Testcases.Login@5d0bf09b]" name="doLogin" class="Testcases.Login"/>
+        <method signature="Registration.registrationWithAllFields()[pri:1, instance:Testcases.Registration@4681c175]" name="registrationWithAllFields" class="Testcases.Registration"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2023-12-29T11:38:33 IST" name="Test" finished-at="2023-12-29T11:39:39 IST" duration-ms="66175">
+      <class name="Testcases.Registration">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:38:43 IST" name="setup" finished-at="2023-12-29T11:38:52 IST" duration-ms="8633" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registrationWithAllFields()[pri:1, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:38:52 IST" name="registrationWithAllFields" finished-at="2023-12-29T11:38:53 IST" duration-ms="987" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at Testcases.Registration.registrationWithAllFields(Registration.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationWithAllFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:38:53 IST" name="teardown" finished-at="2023-12-29T11:38:53 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:38:53 IST" name="setup" finished-at="2023-12-29T11:39:02 IST" duration-ms="8725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registrationWithRequiredFields()[pri:2, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:02 IST" name="registrationWithRequiredFields" finished-at="2023-12-29T11:39:08 IST" duration-ms="5395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationWithRequiredFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:08 IST" name="teardown" finished-at="2023-12-29T11:39:08 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:08 IST" name="setup" finished-at="2023-12-29T11:39:17 IST" duration-ms="8814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="RegistrationWithOutGivingFields()[pri:3, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:17 IST" name="RegistrationWithOutGivingFields" finished-at="2023-12-29T11:39:17 IST" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationWithOutGivingFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:17 IST" name="teardown" finished-at="2023-12-29T11:39:17 IST" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:17 IST" name="setup" finished-at="2023-12-29T11:39:26 IST" duration-ms="8662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registerWithDuplicateField()[pri:4, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:26 IST" name="registerWithDuplicateField" finished-at="2023-12-29T11:39:27 IST" duration-ms="997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithDuplicateField -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:27 IST" name="teardown" finished-at="2023-12-29T11:39:27 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:27 IST" name="setup" finished-at="2023-12-29T11:39:38 IST" duration-ms="10586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registrationWithNonMandatoryFields()[pri:5, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:38 IST" name="registrationWithNonMandatoryFields" finished-at="2023-12-29T11:39:38 IST" duration-ms="651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationWithNonMandatoryFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases.Registration@4681c175]" started-at="2023-12-29T11:39:39 IST" name="teardown" finished-at="2023-12-29T11:39:39 IST" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Testcases.Registration -->
+      <class name="Testcases.Login">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Testcases.Login@5d0bf09b]" started-at="2023-12-29T11:38:33 IST" name="setup" finished-at="2023-12-29T11:38:37 IST" duration-ms="3816" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="doLogin()[pri:0, instance:Testcases.Login@5d0bf09b]" started-at="2023-12-29T11:38:37 IST" name="doLogin" finished-at="2023-12-29T11:38:43 IST" duration-ms="6367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcases.Login@5d0bf09b]" started-at="2023-12-29T11:38:43 IST" name="tearDown" finished-at="2023-12-29T11:38:43 IST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testcases.Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
