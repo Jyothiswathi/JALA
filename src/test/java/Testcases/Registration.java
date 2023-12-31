@@ -1,6 +1,5 @@
 package Testcases;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -18,12 +17,13 @@ import org.testng.annotations.Test;
 
 import PageClasses.LoginPage;
 import PageClasses.RegistrationPage;
+import Utilities.Base;
 import Utilities.DriverFactory;
 import Utilities.Setup;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Registration {
-public	WebDriver driver = null;
+	public WebDriver driver = null;
 
 	RegistrationPage RegistrationPage;
 
@@ -34,45 +34,54 @@ public	WebDriver driver = null;
 		RegistrationPage = new RegistrationPage(driver);
 		driver.get("https://magnus.jalatechnologies.com/");
 		LoginPage Login = new LoginPage(driver);
-		Login.doLoginWithValidCredientials("training@jalaacademy.com","jobprogram");
-		
+		Login.doLoginWithValidCredientials("training@jalaacademy.com", "jobprogram");
+
 		RegistrationPage.NavigationToRegistrationPage();
 	}
 
 	@Test(priority = 1, groups = { "smoke" })
-	public void registrationWithAllFields() throws FileNotFoundException {
-		boolean isRegistered=false;
-
-		isRegistered	=RegistrationPage.registerWithAllFields();
-		Assert.assertTrue(isRegistered);
+	public void registrationWithAllFields() throws IOException, InterruptedException {
+		boolean isValidation = false;
+		RegistrationPage.registerWithAllFields();
+		isValidation = RegistrationPage.validateRegistrationPage();
+		Assert.assertTrue(isValidation, "Validation of register with all  fields are failed");
 	}
 
 	@Test(priority = 2)
 	public void registrationWithRequiredFields() throws InterruptedException, IOException {
-		RegistrationPage.registerWithMandatoryFields();
+		boolean isvalidation = false;
+		isvalidation = RegistrationPage.registerWithMandatoryFields();
+		Assert.assertTrue(isvalidation, "Validation of registration with required fields are failed");
 	}
 
 	@Test(priority = 3)
 	public void RegistrationWithOutGivingFields() {
+		boolean isvalidation = false;
 
-		RegistrationPage.RegistrationWithOutGivingFields();
+		isvalidation = RegistrationPage.RegistrationWithOutGivingFields();
+		Assert.assertTrue(isvalidation, "validation of Registration without giving any fields are failed");
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 3)
 	public void registrationWithNonMandatoryFields() {
-		RegistrationPage.registrationWithNonMandatoryFields();
+		boolean isValidation = false;
+		isValidation = RegistrationPage.registrationWithNonMandatoryFields();
+		Assert.assertTrue(isValidation, "validation of registration with only non mandatory fields are failed");
 
 	}
 
-	@Test(priority = 4)
-	public void registerWithDuplicateField() {
+	@Test(priority = 0)
+	public void registerWithDuplicateField() throws IOException, InterruptedException {
+		boolean isValidation = false;
 		RegistrationPage.registrationwithDuplicateFields();
+		isValidation = RegistrationPage.validateRegistrationPage();
+		Assert.assertTrue(isValidation, "Validation of registrationWithDuplicate fields are failed");
+
 	}
 
 	@AfterMethod(groups = { "smoke" })
 	public void teardown() {
 		driver.quit();
 	}
-	
 
 }

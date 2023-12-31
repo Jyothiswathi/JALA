@@ -45,7 +45,7 @@ public class MiscellaneousScenarios  extends Setup{
 //		driver.findElement(By.id("UserName")).sendKeys("training@jalaacademy.com");
 //		driver.findElement(By.id("Password")).sendKeys("jobprogram");
 //		driver.findElement(By.id("btnLogin")).click();
-//		driver.findElement(By.xpath("//a[contains(.,'More')]")).click();ss
+//		driver.findElement(By.xpath("//a[contains(.,'More')]")).click();
 //		driver.findElement(By.xpath("//a[contains(.,' iFrames')]")).click();
 //		driver.switchTo().frame("iframe2");
 //		driver.findElement(By.xpath("//a[@data-toggle='push-menu']")).click();
