@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PopupAndWindowHandling">
+      <class name="Testcases.LoginScenarios">
         <methods>
-          <include name="setup"/>
-          <include name="HandleSingleWindow"/>
+          <include name="initBrowesr"/>
+          <include name="loginWithinValidEmail"/>
+          <include name="logOut"/>
         </methods>
-      </class> <!-- PopupAndWindowHandling -->
+      </class> <!-- Testcases.LoginScenarios -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
