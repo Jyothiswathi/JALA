@@ -1,13 +1,8 @@
-/**
- * @author JALA Academy
- *
- * 6.Write a program to write text to .txt file using FileWriter
- */
+
 package JavaIO;
 
 import java.io.FileWriter;
 
-// FileWriter class is used to write character-oriented data to a file.
 public class WritingFileUsingFileWriter {
     public static void main(String[] args) {
 
